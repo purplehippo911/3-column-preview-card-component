@@ -22,7 +22,7 @@ body {
   position: relative;
   width: calc(400px - 30px);
   height: calc(300px - 30px);
-  background: blue;
+  background-color: var(--orange-background-color);
   float: left;
   margin: 15px;
   box-sizing: border-box;
