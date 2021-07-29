@@ -38,3 +38,7 @@ body {
   transition: 0, 5%;
   z-index: 1;
 }
+.container .box:hover .icon {
+  top: 20px;
+  right: calc(50%);
+}
