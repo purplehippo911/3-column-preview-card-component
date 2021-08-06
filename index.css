@@ -1,7 +1,7 @@
 :root {
-  --orange-background-color: hsl(31, 77%, 52%);
+  --orange-bg-color: hsl(31, 77%, 52%);
   --middle-column-bg-color: hsl(184, 100%, 22%);
-  --dark-box-background-color: hsl(179, 100%, 13%);
+  --last-coloumn-bg-color: hsl(179, 100%, 13%);
   --paragraph-color: hsla(0, 0%, 100%, 0.75);
   --light-grey: hsl(0, 0%, 95%);
 }
@@ -9,25 +9,26 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: var(--light-grey);
+  color: var(--light-grey);
   font-family: "Lexend Deca", sans-serif;
 }
 
 .container {
   width: 1200px;
-  height: 300px;
+  height: 200px;
   margin: 240px auto;
-  background: black;
 }
 .container .box {
   position: relative;
   width: calc(400px - 30px);
   height: calc(300px - 30px);
-  background-color: var(--orange-background-color);
   float: left;
-  margin: 15px;
   box-sizing: border-box;
   overflow: hidden;
   border-radius: 10px;
+  align-items: center;
+  justify-content: center;
 }
 .container .box .icon {
   position: absolute;
@@ -41,4 +42,25 @@ body {
 .container .box:hover .icon {
   top: 20px;
   right: calc(50%);
+}
+.first--coloumn {
+  background-color: var(--orange-bg-color);
+}
+
+.middle__coloumn {
+  background-color: var(--middle-column-bg-color);
+}
+.last__coloumn {
+  background-color: var(--last-coloumn-bg-color);
+}
+.card__heading {
+  text-align: center;
+}
+.card__body {
+  color: var(--paragraph-color);
+  text-align: center;
+}
+footer {
+  color: blue;
+  text-align: center;
 }
