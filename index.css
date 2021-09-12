@@ -2,46 +2,28 @@
   --orange-bg-color: hsl(31, 77%, 52%);
   --middle-column-bg-color: hsl(184, 100%, 22%);
   --last-coloumn-bg-color: hsl(179, 100%, 13%);
-  --paragraph-color: hsla(0, 0%, 100%, 0.75);
-  --light-grey: hsl(0, 0%, 95%);
+  --paragraph-color: hsla(0, 0%, 100%, 0.75); /* * paragraphs */
+  --light-grey: hsl(0, 0%, 95%); /* * background, heading, buttons */
 }
 
 body {
-  margin: 0;
-  padding: 0;
+  max-height: 100%;
+  align-items: center;
+  justify-content: center;
   background-color: var(--light-grey);
-  color: var(--light-grey);
+  color: var(--paragraph-color);
+  text-align: center;
   font-family: "Lexend Deca", sans-serif;
 }
 
 .container {
-  width: 1200px;
-  height: 200px;
-  margin: 240px auto;
+  width: 85%;
+  max-width: 500px;
 }
 .container .box {
-  position: relative;
-  width: calc(400px - 30px);
-  height: calc(300px - 30px);
-  float: left;
+  border-radius: 0.5em;
   box-sizing: border-box;
   overflow: hidden;
-  border-radius: 10px;
-  align-items: center;
-  justify-content: center;
-}
-.container .box .icon {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: 0, 5%;
-  z-index: 1;
-}
-.container .box:hover .icon {
-  top: 20px;
-  right: calc(50%);
 }
 .first--coloumn {
   background-color: var(--orange-bg-color);
@@ -54,13 +36,47 @@ body {
   background-color: var(--last-coloumn-bg-color);
 }
 .card__heading {
-  text-align: center;
+  color: var(--very-light-gray);
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
-.card__body {
-  color: var(--paragraph-color);
+.card__button {
+  display: inline-block;
+  text-decoration: none;
   text-align: center;
+  text-transform: capitalize;
+  background-color: var(--light-gray);
+  padding: 0.7em 2em;
+  margin-top: 2em;
+  border-radius: 5em;
+  transition: border 0.1s ease-in-out;
+}
+.card--orange .card__button {
+  color: var(--orange-bg-color);
+}
+.card--middle-column-bg-color .card__button {
+  color: var(--middle-column-bg-color);
+}
+.card--last-coloumn-bg-color .card__button {
+  color: var(--last-coloumn-bg-color);
+}
+.card__button:hover {
+  color: var(--light-gray);
+  background-color: transparent;
+  border: 2.5px solid var(--light-gray);
+  padding: 0.53em 1.8em;
 }
 footer {
-  color: blue;
-  text-align: center;
+  position: relative;
+  color: blue; /*To make the footer visible*/
+  bottom: 0;
+}
+
+@media (min-width: 40em) {
+  body {
+    height: 100vh;
+  }
 }
