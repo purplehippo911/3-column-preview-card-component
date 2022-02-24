@@ -26,9 +26,10 @@ a:active {
 }
 .container {
   width: clamp(375px, 84%, 1440px);
+  min-height: 100vh;
   height: auto;
-  margin: 0 auto;
   display: grid;
+  place-content: center;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   padding: 3.2rem 3rem;
   box-sizing: border-box;
@@ -61,12 +62,10 @@ a:active {
   font-size: 40px;
   z-index: 1;
   opacity: 0.9;
-  font-family: "Big Shoulders Display", cursive;
+  font-family: "Big Shoulders Display", sans-serif;
   color: var(--very_light_gray);
 }
 .card_info {
-  margin: 60;
-  padding: 0;
   position: relative;
   left: 50px;
   line-height: 25px;
@@ -79,6 +78,7 @@ button {
   border-radius: 100px;
   border: 2px solid var(--very_light_gray);
   padding: 0.7rem 1.5rem;
+  transition: 0.7s;
 }
 .button--first_coloumn {
   color: var(--bright_orange);
