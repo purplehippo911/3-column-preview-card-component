@@ -29,8 +29,8 @@ a:active {
   min-height: 100vh;
   height: auto;
   display: grid;
-  place-content: center;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  place-content: center;
   padding: 3.2rem 3rem;
   box-sizing: border-box;
 }
