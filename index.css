@@ -28,9 +28,10 @@ a:active {
   width: clamp(375px, 84%, 1440px);
   min-height: 100vh;
   height: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  place-content: center;
+  display: flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
   padding: 3.2rem 3rem;
   box-sizing: border-box;
 }
