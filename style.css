@@ -25,9 +25,8 @@ a:active {
   color: rgb(70, 500, 500);
 }
 .container {
-  width: clamp(375px, 84%, 1440px);
-  min-height: 100vh;
-  height: auto;
+  width: 80%;
+  padding: 5rem;
   display: flex;
   flex-direction:column;
   justify-content:center;
@@ -112,4 +111,10 @@ footer img {
   height: 50px;
   border: solid salmon 5px;
   border-radius: 100px;
+}
+
+@media(min-width:1000px) {
+  .container {
+  flex-direction:row;
+  }
 }
